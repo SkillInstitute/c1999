@@ -807,3 +807,47 @@ src="https://www.facebook.com/tr?id=1837850023602425&ev=PageView&noscript=1"
     </script>
 </body>
 </html>
+<!-- ===== FLOATING BUY-NOW BUTTON ===== -->
+<style>
+  .float-buy{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+    z-index:999;
+    width:160px;
+    height:55px;
+    border:none;
+    border-radius:50px;
+    background:linear-gradient(45deg,#bf953f,#fcf6ba,#b38728);
+    color:#4a3902;
+    font-size:1.1rem;
+    font-weight:800;
+    cursor:pointer;
+    box-shadow:0 0 20px rgba(191,149,63,.6), 0 4px 12px rgba(0,0,0,.25);
+    animation:pulse 2s infinite;
+    transition:all .3s ease;
+  }
+  .float-buy:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 30px rgba(191,149,63,.8);
+  }
+  @keyframes pulse{
+    0%{box-shadow:0 0 20px rgba(191,149,63,.6), 0 4px 12px rgba(0,0,0,.25);}
+    50%{box-shadow:0 0 35px rgba(191,149,63,1), 0 6px 18px rgba(0,0,0,.3);}
+    100%{box-shadow:0 0 20px rgba(191,149,63,.6), 0 4px 12px rgba(0,0,0,.25);}
+  }
+  /* mobile par thoda chota */
+  @media(max-width:480px){
+    .float-buy{
+      width:140px;
+      height:48px;
+      font-size:1rem;
+      bottom:20px;
+      right:15px;
+    }
+  }
+</style>
+
+<button class="float-buy" onclick="window.location.href='/bf1999'">
+  BUY NOW ₹1999
+</button>
